@@ -7,6 +7,10 @@
     "test": "mocha",
     "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzvonar/deleteIn.git"
+  },
   "keywords": [
     "deleteIn",
     "delete",
@@ -16,6 +20,9 @@
   ],
   "author": "Martin Zvonar <riffmaker@gmail.com> (martinzvonar.sk)",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mzvonar/deleteIn/issues"
+  },
   "devDependencies": {
     "coveralls": "2.13.1",
     "expect": "1.20.2",
