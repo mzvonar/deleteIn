@@ -1,6 +1,6 @@
 {
   "name": "@mzvonar/deletein",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Deletes value in object according to provided path and returns copy of object",
   "main": "index.js",
   "scripts": {
