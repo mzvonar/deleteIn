@@ -35,6 +35,7 @@ function createDeleteIn(mutable) {
         if(contextType === '[object Array]') {
             var copy = mutable ? context : [].concat(context);
 
+            /* istanbul ignore else */
             if(path.length === 0) {
                 if(typeof currentPathPart !== 'number') {
                     throw new Error('Trying to delete from Array with index type ' + typeof currentPathPart);
@@ -57,6 +58,7 @@ function createDeleteIn(mutable) {
         else if(contextType === '[object Object]') {
             var copy = mutable ? context : Object.assign({}, context);
 
+            /* istanbul ignore else */
             if(path.length === 0) {
                 delete copy[currentPathPart];
             }
@@ -67,7 +69,7 @@ function createDeleteIn(mutable) {
             return copy;
         }
         else {
-            throw new Error('Trying to add property to ' + contextType);
+            throw new Error('Trying to delete property from ' + contextType);
         }
     };
 }
