@@ -2,8 +2,11 @@
   "name": "@mzvonar/deletein",
   "version": "0.0.4",
   "description": "Deletes value in object according to provided path and returns copy of object",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "index.js",
   "scripts": {
+    "build": "NODE_ENV=production babel index.js -d dist --ignore 'test/*' --copy-files",
+    "prepublish": "npm run build",
     "test": "mocha",
     "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
   },
@@ -24,9 +27,12 @@
     "url": "https://github.com/mzvonar/deleteIn/issues"
   },
   "devDependencies": {
-    "coveralls": "2.13.1",
+    "@babel/cli": "7.0.0",
+    "@babel/core": "7.0.1",
+    "@babel/preset-env": "7.0.0",
+    "coveralls": "3.0.2",
     "expect": "1.20.2",
     "istanbul": "0.4.5",
-    "mocha": "3.4.2"
+    "mocha": "5.2.0"
   }
 }
